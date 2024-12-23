@@ -1,0 +1,16 @@
+name: Exploring Github Enterprise Action Features
+
+on:  
+    workflow_dispatch:
+    push:
+
+jobs:
+    hello_job:
+        runs-on: self-hosted
+        steps:
+        - name: hello
+          run: |
+            echo "Hello Github Enterprise¡"
+
+        - name: External all using CURL
+          run: curl -v http://httpbin.org/ip
